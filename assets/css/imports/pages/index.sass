@@ -1,0 +1,144 @@
+// Style For Index Page
+#hero
+	height: 100vh
+	background: #c0392b
+	color: #FFF
+	.text-reveal
+		float: left
+		text-align: center
+		width: 50%
+		font-size: 5em
+		// background: #EEE // For test
+		.top, .bottom
+			display: flex
+			justify-content: center
+			height: 50vh
+			// border: 1px dashed red // For test
+			overflow: hidden
+			h1
+				padding: 0
+				margin: 0
+		.separator
+			display: flex
+			width: 45%
+			height: 1px 
+			background: $color_white
+			margin: auto
+			transform-origin: right center
+			animation: separatorMovment 2s ease-out forwards
+		.top
+			h1
+				align-items: flex-end
+				display: flex
+				transform: translateY(150px)
+				animation: moveText 1s cubic-bezier(0,0,.05,1.28) forwards
+				animation-delay: 1.5s
+		.bottom
+			h1
+				transform: translateY(-200px)
+				animation: moveText 1s cubic-bezier(0,0,.05,1.28) forwards
+				animation-delay: .85s + 1.5s
+
+	.formSection
+		float: right
+		width: 50%
+		display: flex
+		justify-content: center
+		height: 100%
+		form
+			display: block
+			width: 70%
+			margin: auto
+			// background: transparentize(#FFF, .6)
+			background: #FFF
+			padding: 20px
+			box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
+			border-radius: 3px
+			input
+				padding: 15px 10px
+				position: relative
+				&.wrong-letter:after
+					content: 'Only numbers are allowed'
+					position: absolute
+					top: 0
+					right: -100%
+					background: #444
+					padding: 10px
+					display: block
+
+
+			select
+				padding: 6px
+			input:nth-child(1)
+				width: 100%
+				display: block
+				margin-bottom: 10px
+				background: transparent
+				border: 0
+				border-bottom: 2px solid transparentize(#DDD, .4)
+				outline: 0
+				box-shadow: none
+				font-size: 1.3em
+				transition: .25s
+				&:focus
+					outline: 0
+					box-shadow: none
+					border-bottom: 2px solid #DDD
+			input:nth-child(2)
+				margin-right: 1%
+			select
+				margin-left: 3%
+				option
+					color: #333
+			input:nth-child(2), select
+				width: 48%
+				display: inline-block
+				float: left
+				margin-bottom: 25px
+				background: transparent
+				border: 0
+				border-bottom: 2px solid transparentize(#DDD, .4)
+				outline: 0
+				box-shadow: none
+				// color: #f4bdd1
+				font-size: 1.3em
+				transition: .25s
+				&:focus
+					outline: 0
+					box-shadow: none
+					border-bottom: 2px solid #DDD
+			input[type="submit"]
+				display: block
+				width: 100%
+				background: $color_light
+				color: $color_white
+				border: 0
+				transition: .14s
+				&:hover
+					background: $color_light / .95
+					cursor: pointer
+
+	.start-scroll
+		position: absolute
+		bottom: 20px
+		right: 0
+		left: 0
+		text-align: center
+		color: #FFF
+
+
+
+
+// Animations
+@keyframes moveText
+	100%
+		transform: translateY(0)
+
+@keyframes separatorMovment
+	0%
+		width: 0
+	100%
+		width: 45%
+
+
+

@@ -1,0 +1,49 @@
+// General Styles
+* 
+	-webkit-box-sizing: padding-box !important
+	-moz-box-sizing: padding-box !important
+	box-sizing: padding-box !important
+
+body
+	background: $color_light_gray
+	font-size: 16px // 1rem
+	font-family: $font_p
+	overflow-x: hidden
+	direction: rtl
+
+// Clearfix
+.cf:after, .cf:before
+	content: ''
+	display: table
+.cf:after
+	clear: both
+
+
+// Container
+.container
+	padding-right: 15px
+	padding-left: 15px
+	margin-right: auto
+	margin-left: auto
+	&:aftre, &:before
+		content: ' '
+		display: table
+	&:after
+		clear: both
+
+@media (min-width: 768px)
+	.container
+		width: 750px
+
+@media (min-width: 992px)
+	.container
+		width: 970px
+
+@media (min-width: 1200px)
+	.container
+		width: 1170px
+
+
+// Img
+img
+	vertical-align: middle

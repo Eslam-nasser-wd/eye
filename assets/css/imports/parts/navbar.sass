@@ -1,0 +1,33 @@
+// Navbar
+nav
+	position: absolute
+	top: 0
+	right: 0
+	left: 0
+	padding: 10px
+	color: #FFF
+	z-index: 100
+	padding-top: 15px
+	display: flex
+	.logo
+		float: left
+		width: 50px
+		position: relative
+		img
+			width: 100%
+	ul.right-nav
+		float: right
+		list-style-type: none
+		padding: 0
+		margin: 0
+		li
+			display: inline-block
+			a
+				color: #FFF
+				text-decoration: none
+				&.cta
+					background: $color_light
+					padding: 10px 15px
+					box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
+					border-radius: 3px
+
